@@ -3,73 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irish Interior Design | Where Art Meets Precision Engineering</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Irish Interior Design | Home</title>
     <style>
-        :root {
-            --charcoal: #121212;
-            --cream: #f9f6f1;
-            --gold: #c5a059;
-            --deep-green: #244434;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Roboto', sans-serif; background-color: var(--cream); color: var(--charcoal); }
-        h1, h2 { font-family: 'Playfair Display', serif; text-transform: uppercase; letter-spacing: 2px; }
-
-        /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: rgba(255,255,255,0.98); position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: bold; letter-spacing: 2px; color: var(--charcoal); }
-        .nav-links { list-style: none; display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--charcoal); font-weight: 400; font-size: 0.9rem; }
-        .nav-links a:hover { color: var(--gold); }
-
-        /* Hero Section - Uses image_0 (linear lights) */
-        .hero { height: 90vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; margin-top: 70px; }
-        /* When you have the image file, you would use:
-           url('image_0.png')
-        */
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.1; }
-        .hero p { font-size: 1.3rem; font-weight: 300; max-width: 600px; margin-bottom: 2rem; }
-        .btn { display: inline-block; border: 1px solid white; color: white; padding: 12px 30px; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; transition: all 0.3s; }
-        .btn:hover { background-color: var(--gold); border-color: var(--gold); }
-
-        /* USP Section */
-        .usp { padding: 5rem 10%; text-align: center; background: white; }
-        .usp h2 { color: var(--deep-green); font-size: 2rem; margin-bottom: 1rem; }
-        .usp p { max-width: 700px; margin: 0 auto; line-height: 1.8; color: #555; }
-
-        footer { background: var(--charcoal); color: white; padding: 3rem; text-align: center; font-size: 0.9rem; }
+        :root { --gold: #c5a059; --dark: #1a1a1a; --light: #f4f4f4; }
+        body { font-family: 'Arial', sans-serif; margin: 0; background: var(--light); color: var(--dark); }
+        nav { display: flex; justify-content: space-between; padding: 20px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: bold; letter-spacing: 2px; font-size: 1.2rem; }
+        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; }
+        .hero { height: 80vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .btn { padding: 12px 30px; border: 2px solid var(--gold); color: var(--gold); text-decoration: none; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { background: var(--gold); color: white; }
     </style>
 </head>
 <body>
-
-<nav>
-    <div class="logo">Irish Interior Design</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<section class="hero">
-    <h1>Engineering Precision.<br>Artist's Vision.</h1>
-    <p>We are a certified interior design firm specializing in seamlessly merging structural integrity with elegant aesthetics.</p>
-    <a href="portfolio.html" class="btn">View Our Process</a>
-</section>
-
-<section class="usp">
-    <h2>We Speak the Language of Engineers.</h2>
-    <p>Irish Interior Design isn't just about choosing fabrics. With technical school credentials and practical installation experience, we collaborate with engineers and contractors to ensure optimal space utilization, technical integration, and structural coherence—before the first furniture piece arrives.</p>
-</section>
-
-<footer>
-    <p>&copy; 2026 Irish Interior Design | Lagos, Nigeria</p>
-    <p>Redefining the relationship between space and function.</p>
-</footer>
-
+    <nav>
+        <div class="logo">IRISH INTERIOR DESIGN</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Precision in Every Detail</h1>
+        <p>Expert Interior Design & Technical Installation</p>
+        <a href="portfolio.html" class="btn">View My Work</a>
+    </section>
 </body>
 </html>
