@@ -3,133 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irish Interior Design | Elegant Spaces</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Irish Interior Design | Where Art Meets Precision Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
+            --charcoal: #121212;
+            --cream: #f9f6f1;
             --gold: #c5a059;
-            --charcoal: #2d2d2d;
-            --cream: #fcfaf7;
-            --white: #ffffff;
+            --deep-green: #244434;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Playfair Display', serif; /* Use a serif font for luxury feel */
-            background-color: var(--cream);
-            color: var(--charcoal);
-            line-height: 1.6;
-        }
+        body { font-family: 'Roboto', sans-serif; background-color: var(--cream); color: var(--charcoal); }
+        h1, h2 { font-family: 'Playfair Display', serif; text-transform: uppercase; letter-spacing: 2px; }
 
         /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            background: var(--white);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-            color: var(--charcoal);
-            text-transform: uppercase;
-        }
-
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: rgba(255,255,255,0.98); position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: bold; letter-spacing: 2px; color: var(--charcoal); }
         .nav-links { list-style: none; display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--charcoal); font-weight: 500; }
+        .nav-links a { text-decoration: none; color: var(--charcoal); font-weight: 400; font-size: 0.9rem; }
+        .nav-links a:hover { color: var(--gold); }
 
-        /* Hero Section */
-        .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            margin-top: 70px;
-        }
+        /* Hero Section - Uses image_0 (linear lights) */
+        .hero { height: 90vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; margin-top: 70px; }
+        /* When you have the image file, you would use:
+           url('image_0.png')
+        */
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.1; }
+        .hero p { font-size: 1.3rem; font-weight: 300; max-width: 600px; margin-bottom: 2rem; }
+        .btn { display: inline-block; border: 1px solid white; color: white; padding: 12px 30px; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; transition: all 0.3s; }
+        .btn:hover { background-color: var(--gold); border-color: var(--gold); }
 
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; letter-spacing: 1px; }
+        /* USP Section */
+        .usp { padding: 5rem 10%; text-align: center; background: white; }
+        .usp h2 { color: var(--deep-green); font-size: 2rem; margin-bottom: 1rem; }
+        .usp p { max-width: 700px; margin: 0 auto; line-height: 1.8; color: #555; }
 
-        /* Portfolio Grid */
-        .container { max-width: 1200px; margin: 4rem auto; padding: 0 20px; }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            position: relative;
-            overflow: hidden;
-            height: 400px;
-            background: #ddd;
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .project-card:hover img { transform: scale(1.1); }
-
-        .project-info {
-            position: absolute;
-            bottom: 0;
-            background: rgba(255,255,255,0.9);
-            width: 100%;
-            padding: 20px;
-        }
-
-        /* Services Section */
-        .services {
-            background: var(--white);
-            padding: 4rem 0;
-        }
-
-        .service-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-            text-align: center;
-        }
-
-        .service-item { flex: 1; min-width: 250px; padding: 20px; }
-        .service-item i { font-size: 2rem; color: var(--gold); margin-bottom: 15px; }
-
-        footer {
-            background: var(--charcoal);
-            color: white;
-            padding: 3rem;
-            text-align: center;
-        }
+        footer { background: var(--charcoal); color: white; padding: 3rem; text-align: center; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -137,64 +47,28 @@
 <nav>
     <div class="logo">Irish Interior Design</div>
     <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
 <section class="hero">
-    <h1>Redefining Modern Living</h1>
-    <p>Formally trained. Artistically driven. Built for you.</p>
+    <h1>Engineering Precision.<br>Artist's Vision.</h1>
+    <p>We are a certified interior design firm specializing in seamlessly merging structural integrity with elegant aesthetics.</p>
+    <a href="portfolio.html" class="btn">View Our Process</a>
 </section>
 
-<div class="container" id="portfolio">
-    <h2 class="section-title">Our Work</h2>
-    <div class="portfolio-grid">
-        <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Living Room">
-            <div class="project-info">
-                <h3>The Minimalist Lounge</h3>
-                <p>Residential Project, 2025</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1556912177-c54030639a45?auto=format&fit=crop&w=800&q=80" alt="Kitchen">
-            <div class="project-info">
-                <h3>Executive Kitchen Suite</h3>
-                <p>Commercial Project</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="services" id="services">
-    <div class="container">
-        <h2 class="section-title">What We Offer</h2>
-        <div class="service-list">
-            <div class="service-item">
-                <i class="fas fa-pencil-ruler"></i>
-                <h3>Space Planning</h3>
-                <p>Optimizing layouts for flow and functionality before the first brick is laid.</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-couch"></i>
-                <h3>Bespoke Furnishing</h3>
-                <p>Custom-designed furniture that fits your style and space perfectly.</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Smart Integration</h3>
-                <p>Seamlessly blending lighting and technology into your home's aesthetic.</p>
-            </div>
-        </div>
-    </div>
+<section class="usp">
+    <h2>We Speak the Language of Engineers.</h2>
+    <p>Irish Interior Design isn't just about choosing fabrics. With technical school credentials and practical installation experience, we collaborate with engineers and contractors to ensure optimal space utilization, technical integration, and structural coherence—before the first furniture piece arrives.</p>
 </section>
 
 <footer>
     <p>&copy; 2026 Irish Interior Design | Lagos, Nigeria</p>
-    <p>Built with precision.</p>
+    <p>Redefining the relationship between space and function.</p>
 </footer>
 
 </body>
