@@ -4,42 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Irish Interior Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
+        :root { --gold: #c5a059; --charcoal: #1a1a1a; --cream: #fdfaf5; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; border-bottom: 1px solid #eee; }
-        .logo { font-weight: bold; font-size: 1.4rem; color: #1a1a1a; text-decoration: none;}
-        .nav-links a { text-decoration: none; color: #1a1a1a; margin-left: 25px; font-weight: 500; }
+        body { font-family: 'Montserrat', sans-serif; background-color: white; color: var(--charcoal); padding-top: 120px; }
         
-        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
-        h2 { text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: #1a1a1a; text-transform: uppercase; letter-spacing: 3px; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 400px; object-fit: cover; }
-        .card-body { padding: 25px; text-align: center; }
-        .card-body h3 { font-size: 1.1rem; margin-bottom: 10px; color: #1a1a1a; }
-        .card-body p { font-size: 0.9rem; color: #c5a059; text-transform: uppercase; letter-spacing: 1px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 8%; background: white; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 3px; text-decoration: none; color: black; font-weight: bold;}
+        .nav-links a { text-decoration: none; color: var(--charcoal); margin-left: 35px; font-size: 0.8rem; text-transform: uppercase; }
+
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
+        .header-area { text-align: center; margin-bottom: 80px; }
+        .header-area h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; }
+        .header-area div { width: 60px; height: 2px; background: var(--gold); margin: 0 auto; }
+
+        /* The Professional Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; margin-bottom: 100px; }
+        .item { position: relative; height: 500px; overflow: hidden; background: #eee; }
+        .item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+        .item:hover img { transform: scale(1.05); }
+
+        .overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; }
+        .overlay h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 5px; }
+        .overlay span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">IRISH INTERIOR DESIGN</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
+
+<nav>
+    <a href="index.html" class="logo">Irish Interior Design</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="header-area">
+        <h2>Our Projects</h2>
+        <div></div>
+    </div>
+
+    <div class="grid">
+        <div class="item">
+            <img src="concept1.png">
+            <div class="overlay">
+                <span>Concept Design</span>
+                <h3>Modern Minimalist Penthouse</h3>
+            </div>
         </div>
-    </nav>
-    <div class="container">
-        <h2>Technical Portfolio</h2>
-        <div class="grid">
-            <div class="card"><img src="concept1.png"><div class="card-body"><p>Vision</p><h3>Modern Minimalist Concept</h3></div></div>
-            <div class="card"><img src="concept2.png"><div class="card-body"><p>Vision</p><h3>Bistro Concept Moodboard</h3></div></div>
-            <div class="card"><img src="lighting.jpg"><div class="card-body"><p>Execution</p><h3>Luxury Chandelier Install</h3></div></div>
-            <div class="card"><img src="install.jpg"><div class="card-body"><p>Safety & Skill</p><h3>Fitting & Finishing Details</h3></div></div>
-            <div class="card"><img src="marble.jpg"><div class="card-body"><p>Materials</p><h3>Premium Stone Wall Integration</h3></div></div>
+
+        <div class="item">
+            <img src="lighting.jpg">
+            <div class="overlay">
+                <span>Electrical Installation</span>
+                <h3>High-End Technical Lighting</h3>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="install.jpg">
+            <div class="overlay">
+                <span>Site Management</span>
+                <h3>Precision Fitting & Execution</h3>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="marble.jpg">
+            <div class="overlay">
+                <span>Material Integration</span>
+                <h3>Premium Stone Finishes</h3>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="concept2.png">
+            <div class="overlay">
+                <span>Commercial Vision</span>
+                <h3>Terra-Modern Bistro Concept</h3>
+            </div>
         </div>
     </div>
+</div>
+
 </body>
 </html>
